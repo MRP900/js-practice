@@ -19,9 +19,9 @@ ul li {
   margin: 5px 0;
 }
 
-ul li:hover {
+/* ul li:hover {
   background: red;
-}
+} */
 
 header {
   background: #f4f4f4;
@@ -78,4 +78,11 @@ header {
   color: #fff;
   padding: 5px;
   margin: 5px;
+}
+
+.remove {
+  background: red;
+  color: black;
+  border: black;
+  margin: 1px 6px 1px 1px;
 }

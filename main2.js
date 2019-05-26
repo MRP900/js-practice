@@ -39,6 +39,7 @@ const userList = document.querySelector('#users');
 
 myForm.addEventListener('submit', onSubmit);
 
+
 function onSubmit(e) {
     e.preventDefault();
 
@@ -48,10 +49,15 @@ function onSubmit(e) {
 
         setTimeout(() => msg.remove(), 3000);
     } else {
+        // Creates list element
         const li = document.createElement('li')
-        li.addEventListener('click', function() {
-            this.remove();
+        li.innerHTML += '<span class="remove">X</span>';
+
+        
+        li.querySelector('.remove').addEventListener('click', function() {
+            this.parentNode.remove();
         });
+        
         li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
         
         userList.appendChild(li);
