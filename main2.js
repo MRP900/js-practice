@@ -48,7 +48,7 @@ function onSubmit(e) {
 
         setTimeout(() => msg.remove(), 3000);
     } else {
-        const li = document.createElement('li');
+        const li = document.createElement('li').addEventListener('click', onRemove);
         li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
         
         userList.appendChild(li);
